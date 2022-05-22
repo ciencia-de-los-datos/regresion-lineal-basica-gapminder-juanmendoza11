@@ -28,7 +28,7 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.values.reshape(139,1)
+    y_reshaped= y.values.reshape(139,1)
 
     # Trasforme `X` a un array de numpy usando reshape
     X_reshaped = X.values.reshape(139,1)
