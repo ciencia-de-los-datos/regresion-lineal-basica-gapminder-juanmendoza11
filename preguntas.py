@@ -53,10 +53,10 @@ def pregunta_02():
     print(df.shape)
 
     # Imprima la correlación entre las columnas `life` y `fertility` con 4 decimales.
-    print(df["life"].corr(df["fertility"]).round(4))
+    print(df['life'].corr(df['fertility']).round(4))
 
     # Imprima la media de la columna `life` con 4 decimales.
-    print(np.mean(y_reshaped).round(4))
+    print(np.mean('life').round(4))
 
     # Imprima el tipo de dato de la columna `fertility`.
     print(type(df['fertility']))
@@ -72,13 +72,13 @@ def pregunta_03():
     """
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = pd.read_csv('gm_2008_region.csv')
+    df = pd.read_csv('gm_2008_region.csv', sep=",", header=0)
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df['fertility']
+    X_fertility = df['fertility'].values.reshape(-1,1)
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df['life']
+    y_life = df['life'].values.reshape(-1,1)
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
